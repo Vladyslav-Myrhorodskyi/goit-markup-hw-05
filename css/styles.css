@@ -528,7 +528,7 @@ p {
 }
 
 .footer-div-email {
-  margin-left: 80px;
+  margin-left: auto;
 }
 
 .footer-email-label {
@@ -546,13 +546,43 @@ p {
   height: 40px;
   box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.15);
   background-color: transparent;
+  padding: 8px 16px;
+  transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.footer-email:focus {
+  border: 1px solid #31d0aa;
+  outline: none;
 }
 
 .footer-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
   border-radius: 4px;
   padding: 8px 24px;
   width: 165px;
   height: 40px;
+  background-color: #4d5ae5;
+  color: #fff;
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.04em;
+  border: none;
+  cursor: pointer;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.footer-button:hover,
+.footer-button:focus {
+  background-color: #31d0aa;
+}
+
+.footer-button-icon {
+  fill: #fff;
 }
 
 /* MODAL*/
@@ -598,16 +628,16 @@ p {
 
 .modal-close-icon {
   fill: #2e2f42;
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .modal-close:hover,
 .modal-close:focus {
   background-color: #404bbf;
-  fill: #fff;
 }
 
-.modal-close-icon:hover,
-.modal-close-icon:focus {
+.modal-close:focus .modal-close-icon,
+.modal-close:hover .modal-close-icon {
   fill: #fff;
 }
 
@@ -623,6 +653,7 @@ p {
   display: flex;
   align-items: center;
   justify-content: center;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .modal-title {
@@ -647,6 +678,7 @@ p {
   letter-spacing: 0.04em;
   color: rgba(46, 47, 66, 0.4);
   outline: transparent;
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .modal-input:focus {
@@ -676,6 +708,7 @@ p {
   top: 50%;
   left: 16px;
   transform: translateY(-50%);
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .modal-input-cover {
@@ -694,11 +727,15 @@ p {
   resize: none;
   padding: 8px 16px;
   margin-bottom: 16px;
+  color: rgba(46, 47, 66, 0.4);
+  outline: transparent;
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .modal-textarea:focus {
-  border: 1px solid #4d5ae5;
-
+  border-color: #4d5ae5;
+  color: #2e2f42;
 }
 
 .modal-textarea::placeholder {
@@ -713,7 +750,6 @@ p {
   color: #8e8f99;
   margin-bottom: 16px;
   display: flex;
-
   justify-content: flex-start;
 }
 
@@ -728,6 +764,9 @@ p {
   display: flex;
   align-items: center;
   justify-content: center;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    border 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .modal-check:checked+.check-label .chek-custom {
