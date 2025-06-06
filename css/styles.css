@@ -788,7 +788,7 @@ p {
 }
 
 .modal-check:checked+.check-label .chek-custom {
-  fill: #fff;
+  fill: #f4f4fd;
   background-color: #404bbf;
-  border: 1px solid #404bbf;
+  border: none;
 }
